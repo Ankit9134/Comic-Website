@@ -1,0 +1,62 @@
+[2025-04-28T10:30:01.674Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:30:02.792Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] 'No comics found'
+[2025-04-28T10:30:02.792Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:30:02.792Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:33:15.937Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:33:18.934Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:33:21.682Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:33:23.785Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] [object Object] Error: [object Object]
+    at /Users/netraj.patel/netraj/projects/wtw/wtw_backend/controller/comic.js:64:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-04-28T10:33:23.786Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:33:23.787Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:34:32.113Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:38:24.864Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:38:30.960Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:38:38.723Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:38:41.228Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] [object Object] Error: [object Object]
+    at /Users/netraj.patel/netraj/projects/wtw/wtw_backend/controller/comic.js:64:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-04-28T10:38:41.229Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:38:41.230Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:39:26.597Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:39:32.152Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:39:34.430Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] No comics found Error: No comics found
+    at /Users/netraj.patel/netraj/projects/wtw/wtw_backend/controller/comic.js:64:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-04-28T10:39:34.431Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:39:34.432Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:39:53.405Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:40:09.341Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:40:11.302Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:40:13.453Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] No comics found Error: No comics found
+    at /Users/netraj.patel/netraj/projects/wtw/wtw_backend/controller/comic.js:64:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-04-28T10:40:13.454Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:40:13.455Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:41:38.279Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:41:54.835Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:42:20.363Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:42:38.583Z] [192.168.37.30] [INFO] [TYPE: APP] [FILE: /wtw_backend/app.js] [FUNCTION: start] [IP: ] [USERID: ] [MESSAGE: Server is running on port 3000] 
+[2025-04-28T10:42:44.766Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/] 
+[2025-04-28T10:42:44.769Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /api-docs/] 
+[2025-04-28T10:42:44.781Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/swagger-ui.css] 
+[2025-04-28T10:42:44.783Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/swagger-ui-bundle.js] 
+[2025-04-28T10:42:44.786Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/swagger-ui-standalone-preset.js] 
+[2025-04-28T10:42:44.795Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/swagger-ui-init.js] 
+[2025-04-28T10:42:44.795Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /api-docs/swagger-ui-init.js] 
+[2025-04-28T10:42:45.258Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /api-docs/favicon-32x32.png] 
+[2025-04-28T10:43:00.897Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:43:02.980Z] [192.168.37.30] [ERROR] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comic fetch failed] No comics found Error: No comics found
+    at /Users/netraj.patel/netraj/projects/wtw/wtw_backend/controller/comic.js:64:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2025-04-28T10:43:02.980Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:43:02.980Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?search=4&genreIds[]=1&sort=newest] 
+[2025-04-28T10:43:08.569Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics?sort=newest] 
+[2025-04-28T10:43:08.789Z] [192.168.37.30] [INFO] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comics fetched successfully] 
+[2025-04-28T10:43:08.789Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?sort=newest] 
+[2025-04-28T10:43:08.790Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics?sort=newest] 
+[2025-04-28T10:43:15.293Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Incoming GET request to /comic/getPaginatedComics] 
+[2025-04-28T10:43:15.702Z] [192.168.37.30] [INFO] [TYPE: ROUTE] [FILE: /wtw_backend/routes/comicRoute.js] [FUNCTION: /getPaginatedComics] [IP: ] [USERID: ] [MESSAGE: Comics fetched successfully] 
+[2025-04-28T10:43:15.703Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics] 
+[2025-04-28T10:43:15.703Z] [192.168.37.30] [INFO] [TYPE: MIDDLEWARE] [FILE: /wtw_backend/middleware/requestLogger.js] [FUNCTION: requestLogger] [IP: ] [USERID: ] [MESSAGE: Outgoing response for GET /comic/getPaginatedComics] 

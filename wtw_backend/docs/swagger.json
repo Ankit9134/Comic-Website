@@ -1,0 +1,428 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Web Toons Wala API Documentation",
+    "version": "1.0.0",
+    "description": "API documentation for Web Toons Wala application"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    },
+    {
+      "url": "http://44.220.159.154:3000",
+      "description": "Staging server"
+    },
+    {
+      "url": "http://44.220.159.154:3000",
+      "description": "Production server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "authorization",
+        "description": "Enter your authorization token"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "statusCode": {
+            "type": "integer",
+            "example": 400
+          },
+          "message": {
+            "type": "string",
+            "example": "Error message"
+          },
+          "data": {
+            "type": "object",
+            "example": {}
+          }
+        }
+      },
+      "Success": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "Success message"
+          },
+          "data": {
+            "type": "object",
+            "example": {}
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "firstName": {
+            "type": "string",
+            "example": "John"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "Doe"
+          },
+          "email": {
+            "type": "string",
+            "example": "john.doe@example.com"
+          },
+          "username": {
+            "type": "string",
+            "example": "johndoe"
+          },
+          "userType": {
+            "type": "string",
+            "enum": ["ADMIN", "USER"],
+            "example": "USER"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Genre": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "genreName": {
+            "type": "string",
+            "example": "Action"
+          },
+          "createdBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "updatedBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Comic": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "comicName": {
+            "type": "string",
+            "example": "Super Hero"
+          },
+          "description": {
+            "type": "string",
+            "example": "A story about a super hero"
+          },
+          "genreId": {
+            "type": "integer",
+            "example": 1
+          },
+          "comicContent": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "example": 1
+                },
+                "imageURL": {
+                  "type": "string",
+                  "example": "https://example.com/image.jpg"
+                },
+                "audioURL": {
+                  "type": "string",
+                  "example": "https://example.com/audio.mp3"
+                },
+                "length": {
+                  "type": "integer",
+                  "example": 100
+                },
+                "sceneNumber": {
+                  "type": "integer",
+                  "example": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Banner": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "banner1Image": {
+            "type": "string",
+            "example": "https://example.com/banner1.jpg"
+          },
+          "banner1Link": {
+            "type": "string",
+            "example": "https://example.com/link1"
+          },
+          "banner2Image": {
+            "type": "string",
+            "example": "https://example.com/banner2.jpg"
+          },
+          "banner2Link": {
+            "type": "string",
+            "example": "https://example.com/link2"
+          },
+          "banner3Image": {
+            "type": "string",
+            "example": "https://example.com/banner3.jpg"
+          },
+          "createdBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "updatedBy": {
+            "type": "integer",
+            "example": 1
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "FileUploadResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "example": 200
+          },
+          "message": {
+            "type": "string",
+            "example": "File uploaded successfully"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "originalname": {
+                "type": "string",
+                "example": "example.jpg"
+              },
+              "filename": {
+                "type": "string",
+                "example": "file-1234567890.jpg"
+              },
+              "fileType": {
+                "type": "string",
+                "enum": ["IMAGE", "AUDIO"],
+                "example": "IMAGE"
+              },
+              "fileURL": {
+                "type": "string",
+                "example": "https://s3.amazonaws.com/bucket-name/file-1234567890.jpg"
+              },
+              "length": {
+                "type": "number",
+                "description": "Audio duration in seconds (only for AUDIO type)",
+                "example": 120.5
+              }
+            }
+          }
+        }
+      },
+      "FileUploadRequest": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "format": "binary",
+            "description": "The file to upload"
+          },
+          "fileType": {
+            "type": "string",
+            "enum": ["IMAGE", "AUDIO"],
+            "description": "Type of file being uploaded",
+            "example": "IMAGE"
+          }
+        },
+        "required": ["file", "fileType"]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Users",
+      "description": "User management endpoints"
+    },
+    {
+      "name": "Genres",
+      "description": "Genre management endpoints"
+    },
+    {
+      "name": "Comics",
+      "description": "Comic management endpoints"
+    },
+    {
+      "name": "Banners",
+      "description": "Banner management endpoints"
+    },
+    {
+      "name": "File Upload",
+      "description": "File upload endpoints"
+    }
+  ],
+  "paths": {
+    "/upload/uploadFile": {
+      "post": {
+        "tags": ["File Upload"],
+        "summary": "Upload a file to S3",
+        "description": "Upload an image or audio file to S3 and return the file details",
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/FileUploadRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File uploaded successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileUploadResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid file type or file not uploaded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized - Invalid or missing token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden - Validation failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/upload/getFileFromCloud": {
+      "get": {
+        "tags": ["File Upload"],
+        "summary": "Get a file from S3",
+        "description": "Retrieve a file from S3 using its key",
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "description": "The key of the file in S3",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "file-1234567890.jpg"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File retrieved successfully",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid key or file not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
