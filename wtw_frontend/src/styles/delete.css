@@ -1,0 +1,137 @@
+/* DeleteConfirmationModal.css */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.delete-modal {
+  background-color: #1e1e1e;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  color: var(--text-primary, #ffffff);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #ff4c4c;
+}
+
+.delete-icon {
+  margin: 15px auto;
+  font-size: 40px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal-message {
+  font-size: 15px;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.delete-button {
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.4);
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button:hover {
+  background-color: #e64444;
+  transform: translateY(-1px);
+}
+
+.success-icon {
+  margin: 16px auto;
+  font-size: 48px;
+  text-align: center;
+}
+
+.success-icon svg {
+  stroke: #4BB543;
+  width: 48px;
+  height: 48px;
+}
+
+.success-message {
+  color: #4BB543;
+  text-align: center;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.confirm-button {
+  background-color: #4BB543;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-button:hover {
+  background-color: #3a9a33;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .delete-modal {
+    padding: 20px 16px;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,21 @@
+.site-title {
+    font-size: 1.5rem; /* 18px -> 1.5rem for better scaling */
+    margin: 2rem 4rem 0;
+    font-weight: 600;
+    color: #eee;
+  }
+  
+  @media (max-width: 800px) {
+    .site-title {
+      margin: 2rem 2.5rem 0;
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .site-title {
+      margin: 2rem 1.5rem 0;
+      font-size: 1.3rem;
+    }
+  }
+  

@@ -1,0 +1,521 @@
+
+
+.image-card, .new-file-card {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  /* height: 200px; */
+  width: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.image-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.marked-delete {
+  opacity: 0.6;
+  position: relative;
+}
+
+.marked-delete::after {
+  content: "Marked for deletion";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 4px;
+  font-size: 12px;
+}
+
+/* Image preview styles */
+.image-preview-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-preview, .new-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-preview-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.preview-button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Image meta and actions */
+.image-meta {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-index {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.image-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f5f5f5;
+}
+
+.action-button:hover {
+  transform: scale(1.1);
+}
+
+.action-button.replace:hover {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+
+.action-button.delete:hover {
+  background: #fff1f0;
+  color: #ff4d4f;
+}
+
+.action-button.undo:hover {
+  background: #f6ffed;
+  color: #52c41a;
+}
+
+/* New files styles */
+.new-file-card {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-preview {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-name {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.upload-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #52c41a;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4d4f;
+  padding: 4px;
+}
+
+.remove-button:hover {
+  background: #fff1f0;
+  border-radius: 4px;
+}
+
+/* Replacement section */
+.replacement-section {
+  padding: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.replace-upload-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #1890ff;
+}
+
+.replace-upload-label:hover {
+  text-decoration: underline;
+}
+/* Hover Effects */
+.hover-effect {
+  transition: all 0.2s ease;
+}
+
+.hover-effect:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+/* Audio Player Container */
+.audio-player-container {
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* File List */
+.file-list {
+  margin-top: 24px;
+}
+.file-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* File Item */
+.file-item {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  /* background-color: #fff; */
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.file-item.marked-delete {
+  background-color: #fee2e2;
+  border-color: #fecaca;
+}
+
+/* Audio Player */
+.audio-player {
+  padding: 12px;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+}
+
+.play-pause-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  color: #3b82f6;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.play-pause-btn:hover {
+  background-color: #dbeafe;
+}
+
+.audio-info {
+  flex-grow: 1;
+  margin-left: 12px;
+  max-width: calc(100% - 60px);
+}
+
+.file-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+}
+
+.delete-flag {
+  color: #ef4444;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.time-display {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.time-display span {
+  margin: 0 2px;
+}
+
+.progress-container {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.progress-bar:hover {
+  background-color: #d1d5db;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: none;
+}
+
+/* File Actions */
+.file-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  padding: 0 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.file-actions.visible {
+  opacity: 1;
+}
+
+.delete-button,
+.replace-button {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-button {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #fecaca;
+}
+
+.delete-button.undo-delete {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.delete-button.undo-delete:hover {
+  background-color: #a7f3d0;
+}
+
+.replace-button {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.replace-button:hover {
+  background-color: #bae6fd;
+}
+
+.delete-button svg,
+.replace-button svg {
+  margin-right: 4px;
+}
+
+/* Replacement Section */
+.replacement-section {
+  padding: 12px;
+  background-color: #eff6ff;
+  border-top: 1px solid #bfdbfe;
+}
+
+.replace-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #93c5fd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.replace-upload-label:hover {
+  background-color: #f0f9ff;
+}
+
+.replace-upload-label svg {
+  margin-right: 8px;
+}
+
+/* New Audio Files */
+.new-files {
+  margin-top: 24px;
+}
+
+.new-file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.new-file-info {
+  display: flex;
+  align-items: center;
+}
+
+.new-file-info svg {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+.file-status {
+  display: flex;
+  align-items: center;
+}
+
+.upload-status {
+  display: flex;
+  align-items: center;
+  color: #059669;
+  font-size: 14px;
+}
+
+.upload-status svg {
+  margin-right: 4px;
+}
+
+.remove-file {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: background-color 0.2s;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.remove-file:hover {
+  background-color: #fee2e2;
+}
+
+.remove-file svg {
+  margin-right: 4px;
+}
+
+/* Hover Effect */
+.hover-effect {
+  transition: all 0.2s ease;
+}
+@media (max-width: 400px) {
+ .file-item{
+  width: 250px;
+ }
+}

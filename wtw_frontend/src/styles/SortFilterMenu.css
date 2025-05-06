@@ -1,0 +1,171 @@
+/* Sort Filter Container */
+.sort-filter-container {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+  }
+  
+  /* Sort Button */
+  .sort-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .sort-button:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-1px);
+  }
+  
+  /* Sort Icon */
+  .sort-icon {
+    font-size: 14px;
+  }
+  
+  /* Dropdown Arrow */
+  .dropdown-arrow {
+    transition: transform 0.3s ease;
+    margin-left: 8px;
+  }
+  
+  .dropdown-arrow.open {
+    transform: rotate(180deg);
+  }
+  
+  /* Sort Filter Dropdown Menu */
+  .sort-filter-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #474748;
+    background-color: #1e1e1e;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .sort-filter-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* List Styles */
+  .sort-filter-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Each Item */
+  .sort-filter-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .sort-filter-item:hover {
+    background-color: #333;
+  }
+  
+  .sort-filter-item.active {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /* Focus Styles for Accessibility */
+  .sort-button:focus, 
+  .sort-filter-item:focus {
+    outline: 2px solid #4caf50;
+    outline-offset: 2px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .sort-filter-container {
+      width: 150px;
+    }
+  
+    .sort-button {
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+  
+    .sort-filter-item {
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sort-filter-container {
+      width: 120px;
+    }
+  
+    .sort-button {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  
+    .sort-icon {
+      font-size: 12px;
+    }
+  
+    .sort-filter-item {
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .sort-filter-container {
+      width: 100px;
+      margin: 0 10px;
+    }
+  
+    .sort-filter-menu {
+      left: -10px;
+    }
+  }
+  
+  /* Light Mode */
+  @media (prefers-color-scheme: light) {
+    .sort-filter-menu {
+      background-color: #fff;
+      border-color: #ccc;
+    }
+  
+    .sort-filter-item {
+      color: #333;
+    }
+  
+    .sort-filter-item:hover {
+      background-color: #f5f5f5;
+    }
+  
+    .sort-filter-item.active {
+      background-color: #4caf50;
+      color: white;
+    }
+  }
+  

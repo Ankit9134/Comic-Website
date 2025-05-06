@@ -1,0 +1,223 @@
+/* Reset spacing and smooth scrolling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Carousel Base */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  max-height: 800px;
+  background: linear-gradient(to top, #000, #111);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Overlay for readability */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  z-index: 10;
+}
+
+/* Image styling */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Content Layer */
+.carousel-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  z-index: 20;
+}
+
+.carousel-text {
+  width: 90%;
+  max-width: 42rem;
+}
+
+.carousel-title {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-description {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Button */
+.carousel-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 0.5rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 18px rgba(34, 197, 94, 0.4);
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: clamp(2.8rem, 8vw, 3.5rem);
+  height: clamp(2.8rem, 8vw, 3.5rem);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 30;
+}
+
+.carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.left {
+  left: 1rem;
+}
+
+.carousel-nav.right {
+  right: 1rem;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  z-index: 30;
+}
+
+.carousel-indicator {
+  height: 0.4rem;
+  width: clamp(1.2rem, 3vw, 2rem);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  width: clamp(1.8rem, 5vw, 3rem);
+  background: #22c55e;
+}
+
+/* Tablet & Desktop Enhancements */
+@media (min-width: 640px) {
+  .carousel-container {
+    height: 65vh;
+    min-height: 400px;
+  }
+
+  .carousel-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  }
+
+  .carousel-content {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 3rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-container {
+    height: 70vh;
+  }
+
+  .carousel-text {
+    padding: 0 5rem;
+    max-width: 50rem;
+  }
+
+  .carousel-nav {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .carousel-text {
+    max-width: 56rem;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-slide,
+  .carousel-button:hover,
+  .carousel-nav:hover {
+    transition: none;
+  }
+}

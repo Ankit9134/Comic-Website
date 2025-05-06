@@ -1,0 +1,87 @@
+/* Pagination Container */
+.paginationSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 60px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Pagination Buttons */
+.page-btn {
+  background-color: #333;
+  border: none;
+  color: #ccc;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.page-btn:hover:not(:disabled) {
+  background-color: #4caf50;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Active Page */
+.activeSlide {
+  background-color: #4caf50;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+/* Prev/Next Buttons */
+.page-btn.prev,
+.page-btn.next {
+  font-weight: bold;
+}
+
+/* Disabled State */
+.page-btn:disabled {
+  background-color: #222;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .paginationSlide {
+    margin: 30px 40px;
+    gap: 6px;
+  }
+
+  .page-btn, .activeSlide {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .paginationSlide {
+    margin: 20px;
+    gap: 5px;
+  }
+
+  .page-btn, .activeSlide {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
